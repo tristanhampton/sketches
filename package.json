@@ -4,7 +4,8 @@
   "description": "",
   "main": "sketch.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "run-for-every-file --src './js-sketches/' --file '**/*.js' --run 'echo {{src-file}}'",
+    "build": "run-for-every-file --src './js-sketches/' --dest './sketches/' --file '**/*.js' --run 'canvas-sketch {{src-file}} --name {{file-name}} --dir {{dest}} --build --inline'  "
   },
   "keywords": [],
   "author": "",
